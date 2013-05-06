@@ -1,0 +1,23 @@
+{
+  "name": "catbus",
+  "version": "0.0.1",
+  "author": "Noah Lu <codedancerhua@gmail.com>",
+  "contributors": [],
+  "man": "",
+  "description": "Code Analysis Engine",
+  "main": "./lib/catbus.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+      "type": "git",
+      "url": "git://github.com/totorojs/catbus.git"
+  },
+  "bin": {
+      "catbus": "./bin/catbus"
+  },
+  "dependencies": {
+    "htmlparser": "~1.7.6"
+  },
+  "preferGlobal": true
+}

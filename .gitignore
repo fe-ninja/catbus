@@ -1,0 +1,3 @@
+.DS_*
+*.sublime*
+_parser.js
