@@ -15,3 +15,35 @@ HTML标签状态机，初始状态为“Data State”，当遇到“<”字符�
 
 ![](http://markimage.bcs.duapp.com/2013/04/1367032389)
 
+
+### HTML标签
+![](http://dev.w3.org/html5/html-author/#tags)
+- normal tag
+In both HTML and XHTML, within each tag, whitespace is permitted after the tag name, but it is not permitted before the tag name.
+    - start tag: `<tagname attlists>`
+    - end tag: `</tagname>`
+- self-closing tag: `<tagname>`
+
+### HTML标签场景
+
+```
+嵌套错误
+<div>
+    <p>
+</div>
+    </p>
+```
+
+```
+未闭合
+<div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, aperiam, modi voluptatum possimus nemo facilis corporis quod error culpa dolor ipsa nostrum nesciunt commodi voluptate eum hic consequatur architecto optio.   
+</div>
+```
+
+```
+
+```
+
+```
+```

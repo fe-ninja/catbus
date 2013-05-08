@@ -17,7 +17,6 @@
       "catbus": "./bin/catbus"
   },
   "dependencies": {
-    "htmlparser": "~1.7.6"
   },
   "preferGlobal": true
 }
