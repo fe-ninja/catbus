@@ -17,6 +17,7 @@
       "catbus": "./bin/catbus"
   },
   "dependencies": {
+    "velocityjs": "~0.3.13"
   },
   "preferGlobal": true
 }

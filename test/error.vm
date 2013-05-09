@@ -1,0 +1,11 @@
+<div id="content">
+		<div>
+			<div class="notice n-error-m"><h3>#if($!code) #springMessage("$!code") #else 抱歉，暂时无法操作。 #end</h3>
+				#if($!stringUtil.equals("TRANSFER_DUP_OUT_ORDER",$!code))
+					
+				#else
+				<p class="n-explain">请稍候再试 #if($!stringUtil.isNotBlank($!previousURL))，您也可以<a href="$!previousURL">重新做一笔</a> #end。</p>
+				#end
+			</div>
+		</div>
+</div>

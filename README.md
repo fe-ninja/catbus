@@ -17,7 +17,7 @@ HTML标签状态机，初始状态为“Data State”，当遇到“<”字符�
 
 
 ### HTML标签
-[http://dev.w3.org/html5/html-author/#tags]
+[http://dev.w3.org/html5/html-author/#tags](http://dev.w3.org/html5/html-author/#tags)
 - normal tag
 In both HTML and XHTML, within each tag, whitespace is permitted after the tag name, but it is not permitted before the tag name.
     - start tag: `<tagname attlists>`
