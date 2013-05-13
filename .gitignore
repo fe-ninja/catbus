@@ -1,3 +1,4 @@
 .DS_*
 *.sublime*
 _parser.js
+node_modules

@@ -41,9 +41,28 @@ In both HTML and XHTML, within each tag, whitespace is permitted after the tag n
 </div>
 ```
 
-```
+## 规则定义
 
-```
+每一个自定义规则应配置下列信息：
+- 规则id ("id")
+- 规则说明 ("description")
+- 规则级别 ("Error"/"Warning")
+- 规则作者 ("author")
+- 规则校验详情 ("detail")
 
+整个扫描规则定义到一个配置文件里(比如cbrules.json)，json格式如下
 ```
+{
+    "rule": {
+        "id": "",
+        "description": "",
+        "level": "Error"
+        "author": "远尘"
+        "detail": {
+            "selector": "#main .content div", // 类似css选择器，前期可以做简单一点，只允许tageName/id/className
+            "validator": function(nodes){} // 自定义的校验函数，参数是选择器选中的结果节点数组
+        }
+    },
+    "rule": {}
+}
 ```
