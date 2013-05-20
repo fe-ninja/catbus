@@ -48,9 +48,9 @@ In both HTML and XHTML, within each tag, whitespace is permitted after the tag n
 - 规则说明 ("description")
 - 规则级别 ("Error"/"Warning")
 - 规则作者 ("author")
-- 规则校验详情 ("detail")
+- 规则应用对象Tag ("tagName")
 
-整个扫描规则定义到一个配置文件里(比如cbrules.js)，格式示例如下
+整个扫描规则定义到一个配置文件里(比如catbus-config.js)，格式示例如下
 
 ```javascript
 var config = {
