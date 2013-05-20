@@ -44,15 +44,16 @@ In both HTML and XHTML, within each tag, whitespace is permitted after the tag n
 ## 规则定义
 
 每一个自定义规则应配置下列信息：
-- 规则id ("id")
+- 规则id ("id"), id由系统分配，分为全局id（例如：G00001）和局部id（L00001）
 - 规则说明 ("description")
 - 规则级别 ("Error"/"Warning")
 - 规则作者 ("author")
 - 规则校验详情 ("detail")
 
-整个扫描规则定义到一个配置文件里(比如cbrules.json)，json格式如下
-```
-{
+整个扫描规则定义到一个配置文件里(比如cbrules.js)，格式示例如下
+
+```javascript
+var config = {
     "rule": {
         "id": "",
         "description": "",
@@ -65,4 +66,5 @@ In both HTML and XHTML, within each tag, whitespace is permitted after the tag n
     },
     "rule": {}
 }
+exports = config;
 ```
