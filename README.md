@@ -54,17 +54,22 @@ In both HTML and XHTML, within each tag, whitespace is permitted after the tag n
 
 ```javascript
 var config = {
-    "rule": {
-        "id": "",
-        "description": "",
-        "level": "Error"
-        "author": "远尘"
-        "detail": {
-            "selector": "#main .content div", // 类似css选择器，前期可以做简单一点，只允许tageName/id/className
-            "validator": function(nodes){} // 自定义的校验函数，参数是选择器选中的结果节点数组
-        }
+  rules: [
+    {
+      author: "远尘 <codedancerhua@gmail.com>",
+      description: "表单内的表格class必须包含table form-table well",
+      level: "error",
+      // selector: "form table",
+      tagName: "span",
+      validator: function(nodes) {
+        console.log('in rules, result nodes length: ' + nodes.length)
+      }
     },
-    "rule": {}
-}
-exports = config;
+    {
+      //...
+    }
+  ]
+};
+
+exports.config = config;
 ```
