@@ -19,5 +19,9 @@
   "dependencies": {
     "velocityjs": "~0.3.13"
   },
+  "devDependencies": {
+    "mocha": "~1.9.0",
+    "expect.js": "0.2.0"
+  },
   "preferGlobal": true
 }
