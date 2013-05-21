@@ -7,7 +7,7 @@
   "description": "Code Analysis Engine",
   "main": "./lib/catbus.js",
   "scripts": {
-    "test": ""
+    "test": "make test"
   },
   "repository": {
       "type": "git",

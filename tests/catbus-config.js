@@ -7,7 +7,9 @@ var config = {
       // selector: "form table",
       tagName: "table",
       validator: function(nodes) {
-        console.log('in rules, result nodes length: ' + nodes.length)
+        // console.log('in rules, result nodes length: ' + nodes.length)
+        // return true;
+        return false;
       }
     },
     {
