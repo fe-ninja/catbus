@@ -26,10 +26,11 @@ $template.page.js.setParameter("account","$!transferResultModel.sellerLoginEmail
 #end
 		
 <div class="content-main result-content">
-	<!-- #if($stringUtil.equals("Success", "$!tradeResult")) -->
-    #if("Success" == $!tradeResult)
+	<!-- #if(true) -->
+    #if($stringUtil.equals($xxx, 'yes'))
+    <!-- #if("Success" == $!tradeResult) -->
     <div class="notice-box notice-success fn-clear">
-    	<span class="notice-icon"></span> 		
+    	<span class="notice-icon"></span>
 		<h3>转账成功，对方已收到您的$transferResultModel.totalFee元款项。</h3>
         ##添加联系人
         
