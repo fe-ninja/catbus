@@ -17,7 +17,8 @@
       "catbus": "./bin/catbus"
   },
   "dependencies": {
-    "velocityjs": "~0.3.13"
+    "velocityjs": "~0.3.13",
+    "commander": "~1.1.1"
   },
   "devDependencies": {
     "mocha": "~1.9.0",

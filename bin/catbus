@@ -1,4 +1,12 @@
 #!/usr/bin/env node
 
-exports.cli = true;
-require(require('path').resolve(__filename, '../../lib/catbus.js'));
+var commander = require('commander');
+commander.
+  version(require('../package').version).
+  usage('[options] <file>');
+
+commander.parse(process.argv);
+console.log(JSON.stringify(commander))
+
+// exports.cli = true;
+// require(require('path').resolve(__filename, '../../lib/catbus.js'));
