@@ -1,0 +1,13 @@
+<p>content out side</p>
+#if($!abc)
+    Content if 1
+    #if($stringUtil.equals($aaa, 'aaa'))
+        Content if 1.1
+    #elseif($stringUtil.equals($aaa, 'bbb'))
+        Content elseif 1.1
+    #end
+#elseif($cde)  
+    Content elseif 1
+#else
+    Content else 1
+#end      

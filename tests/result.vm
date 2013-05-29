@@ -27,7 +27,7 @@ $template.page.js.setParameter("account","$!transferResultModel.sellerLoginEmail
 		
 <div class="content-main result-content">
 	<!-- #if(true) -->
-    #if($stringUtil.equals($xxx, 'yes'))
+    #if($stringUtil.equals($tradeResult, 'Success'))
     <!-- #if("Success" == $!tradeResult) -->
     <div class="notice-box notice-success fn-clear">
     	<span class="notice-icon"></span>

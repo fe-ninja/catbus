@@ -1,0 +1,136 @@
+<p>content out side</p>
+#if($stringUtil.equals($result, 'success'))
+    Content if 1
+    #if($stringUtil.equals($aaa, 'aaa'))
+        Content if 1.1
+    #elseif($stringUtil.equals($aaa, 'bbb'))
+        Content elseif 1.1
+    #end
+#elseif($stringUtil.equals($result, 'delay'))  
+    Content elseif 1
+#else
+    Content else 1
+#end      
+
+
+###************************* the veloocityjs parsed tree: *********************
+[
+    '<p>content out side</p>\n', 
+    [
+        {
+            type: 'if',
+            condition: [Object]
+        },
+        '\n Content if 1\n    ', 
+        [
+            [Object],
+            '\n Content if 1.1\n ',
+            [Object],
+            '\n Content elseif 1.1\n    '
+        ],
+        '\n', 
+        {
+            type: 'elseif',
+            condition: [Object]
+        },
+        '  \n Content elseif 1\n', 
+        {
+            type: 'else'
+        },
+        '\n Content else 1\n'
+    ],
+    ' \n\n'
+]
+
+全部展开：
+["<p>content out side</p>\n", [{
+            "type": "if",
+            "condition": {
+                "type": "references",
+                "id": "stringUtil",
+                "path": [{
+                        "type": "method",
+                        "id": "equals",
+                        "args": [{
+                                "type": "references",
+                                "id": "result",
+                                "leader": "$"
+                            }, {
+                                "type": "string",
+                                "value": "success"
+                            }
+                        ]
+                    }
+                ],
+                "leader": "$"
+            }
+        }, "\n    Content if 1\n    ", [{
+                "type": "if",
+                "condition": {
+                    "type": "references",
+                    "id": "stringUtil",
+                    "path": [{
+                            "type": "method",
+                            "id": "equals",
+                            "args": [{
+                                    "type": "references",
+                                    "id": "aaa",
+                                    "leader": "$"
+                                }, {
+                                    "type": "string",
+                                    "value": "aaa"
+                                }
+                            ]
+                        }
+                    ],
+                    "leader": "$"
+                }
+            }, "\n        Content if 1.1\n    ", {
+                "type": "elseif",
+                "condition": {
+                    "type": "references",
+                    "id": "stringUtil",
+                    "path": [{
+                            "type": "method",
+                            "id": "equals",
+                            "args": [{
+                                    "type": "references",
+                                    "id": "aaa",
+                                    "leader": "$"
+                                }, {
+                                    "type": "string",
+                                    "value": "bbb"
+                                }
+                            ]
+                        }
+                    ],
+                    "leader": "$"
+                }
+            }, "\n        Content elseif 1.1\n    "
+        ], "\n", {
+            "type": "elseif",
+            "condition": {
+                "type": "references",
+                "id": "stringUtil",
+                "path": [{
+                        "type": "method",
+                        "id": "equals",
+                        "args": [{
+                                "type": "references",
+                                "id": "result",
+                                "leader": "$"
+                            }, {
+                                "type": "string",
+                                "value": "delay"
+                            }
+                        ]
+                    }
+                ],
+                "leader": "$"
+            }
+        }, "  \n    Content elseif 1\n", {
+            "type": "else"
+        }, "\n    Content else 1\n"
+    ], "      \n\n\n"]
+
+***************************************************************************###
