@@ -11,3 +11,16 @@
 #else
     Content else 1
 #end      
+
+#if(!$abc) 
+    C2
+#elseif($cde)
+    C2 elseif
+#end
+
+#foreach($val in $test)
+in fe
+#end
+
+
+
