@@ -15,11 +15,6 @@ HTML标签状态机，初始状态为“Data State”，当遇到“<”字符�
 
 ![](http://markimage.bcs.duapp.com/2013/04/1367032389)
 
-## Velocity Parser
-基于velocityjs实现。主要扩展了对条件判断（if/elseif）的处理。
-有几点 <del>潜规则</del> 需要注意：
-- 对于传入的context，if中的逻辑会忽略，因为无论条件判断中的值是什么，都需要把所有分支走一遍。
-- 默认加入了stringUtil工具栏类的支持
 
 
 ### HTML标签
@@ -46,6 +41,13 @@ In both HTML and XHTML, within each tag, whitespace is permitted after the tag n
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, aperiam, modi voluptatum possimus nemo facilis corporis quod error culpa dolor ipsa nostrum nesciunt commodi voluptate eum hic consequatur architecto optio.   
 </div>
 ```
+
+## Velocity Parser
+基于velocityjs实现。主要扩展了对条件判断（if/elseif）的处理。
+有几点 <del>潜规则</del> 需要注意：
+- 对于传入的context，if中的逻辑会忽略，因为无论条件判断中的值是什么，都需要把所有分支走一遍。
+- 默认加入了stringUtil工具栏类的支持
+
 
 ## 规则定义
 
