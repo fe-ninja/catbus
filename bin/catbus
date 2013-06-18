@@ -1,13 +1,29 @@
 #!/usr/bin/env node
-
 var commander = require('commander');
+require('colors');
+
+function list(val) {
+    console.log('--list testing... ' + JSON.stringify(val));
+    // return val.split(',');
+    return [1,2,3]
+}
 
 commander.
   version(require('../package').version).
-  usage('[options] <file>');
+  usage('[options] <file>'.red).
+  option('-d, --debug', 'enable debug mode').
+  // option('-l, --list <rules>', 'TESTING : list current rules', list).
+  parse(process.argv);
 
-commander.parse(process.argv);
-// console.log(JSON.stringify(commander));
+  // console.log('process.env: ' + JSON.stringify(process.env));
+
+console.log(JSON.stringify(commander));
+// console.log('list: %j ...' ,commander.list);
+
+// output help and exit if no args found
+if (commander.args.length === 0) {
+    commander.help();
+}
 
 var scanner = require('../lib/catbus').scanner;
 scanner(commander);
