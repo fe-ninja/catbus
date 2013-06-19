@@ -17,7 +17,7 @@ var config = {
                 classes.indexOf('table') == -1 || 
                     classes.indexOf('form-table') == -1 ||
                       classes.indexOf('well') == -1) {
-              return false;
+              return nodes[i];
             }
           }
         }
