@@ -3,9 +3,7 @@ var commander = require('commander');
 require('colors');
 
 function list(val) {
-    console.log('--list testing... ' + JSON.stringify(val));
-    // return val.split(',');
-    return [1,2,3]
+    return val.split(',');
 }
 
 commander.
@@ -15,9 +13,8 @@ commander.
   // option('-l, --list <rules>', 'TESTING : list current rules', list).
   parse(process.argv);
 
-  // console.log('process.env: ' + JSON.stringify(process.env));
-
-console.log(JSON.stringify(commander));
+// console.log('process.env: ' + JSON.stringify(process.env));
+// console.log(JSON.stringify(commander));
 // console.log('list: %j ...' ,commander.list);
 
 // output help and exit if no args found
