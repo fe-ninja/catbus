@@ -2,6 +2,7 @@ var config = {
   rules: [
     {
       author: "远尘 <codedancerhua@gmail.com>",
+      id: "form-table-className",
       description: "表单内的表格class必须包含table form-table well",
       level: "error",
       tagName: "form",
