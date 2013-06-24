@@ -9,7 +9,7 @@ function list(val) {
 commander.
   version(require('../package').version).
   usage('[options] <file/dir>'.red).
-  option('-d, --debug', 'enable debug mode').
+  option('-v, --verbose', 'print detail info').
   // option('-l, --list <rules>', 'TESTING : list current rules', list).
   parse(process.argv);
 
