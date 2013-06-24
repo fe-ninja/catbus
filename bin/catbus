@@ -8,7 +8,7 @@ function list(val) {
 
 commander.
   version(require('../package').version).
-  usage('[options] <file>'.red).
+  usage('[options] <file/dir>'.red).
   option('-d, --debug', 'enable debug mode').
   // option('-l, --list <rules>', 'TESTING : list current rules', list).
   parse(process.argv);
