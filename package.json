@@ -19,7 +19,8 @@
   "dependencies": {
     "velocityjs": "~0.3.13",
     "commander": "~1.1.1",
-    "colors": "~0.6.0"
+    "colors": "~0.6.0",
+    "request": "~2.21.0"
   },
   "devDependencies": {
     "mocha": "~1.9.0",
