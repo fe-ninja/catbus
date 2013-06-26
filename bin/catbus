@@ -8,8 +8,8 @@ function list(val) {
 
 commander.
   version(require('../package').version).
-  usage('[options] <file/dir>'.red).
-  option('-v, --verbose', 'print detail info').
+  usage('[options] <file| directory| url>'.red).
+  option('-v, --verbose', 'print detailed info').
   // option('-l, --list <rules>', 'TESTING : list current rules', list).
   parse(process.argv);
 
