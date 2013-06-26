@@ -1,4 +1,5 @@
 var config = {
+  options: ['tag-closed', 'img-alt'],
   rules: [
     {
       author: "远尘 <codedancerhua@gmail.com>",
