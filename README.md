@@ -1,3 +1,5 @@
+![catbus](https://f.cloud.github.com/assets/1229684/833986/8b8fe03a-f2b1-11e2-8948-0d0fc0d6a2b9.jpg)
+
 # Catbus
 A code analysis engine.
 
