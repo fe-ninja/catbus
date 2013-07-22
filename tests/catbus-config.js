@@ -1,5 +1,5 @@
 var config = {
-  options: ['html-tag-close', 'html-id-duplicated', 'html-meta-charset'],
+  options: ['html-tag-close', 'html-id-duplicated', 'html-meta-charset', 'html-unsafe-resources'],
   rules: [
     {
       author: "远尘 <codedancerhua@gmail.com>",
