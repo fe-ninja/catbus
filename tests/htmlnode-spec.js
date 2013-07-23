@@ -1,6 +1,6 @@
 var expect = require('expect.js');
 var mocha = require('mocha');
-var HtmlNode = require('../lib/htmlnode').htmlnode;
+var HtmlNode = require('../lib/htmlnode').HTMLNode;
 var node = new HtmlNode();
 node.tagName = 'div';
 var childNode0 = new HtmlNode();
