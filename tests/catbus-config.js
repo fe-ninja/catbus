@@ -1,5 +1,13 @@
 var config = {
-  options: ['html-tag-close', 'html-id-duplicated', 'html-meta-charset', 'html-unsafe-resources'],
+  options: [
+    'html-tag-close', 
+    'html-id-duplicate', 
+    'html-meta-charset', 
+    'html-unsafe-resources', 
+    'html-https-warning', 
+    'html-hard-code', 
+    'html-doctype'
+  ],
   rules: [
     {
       author: "远尘 <codedancerhua@gmail.com>",
