@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
 <title>Bank Picker</title>
 <link rel="stylesheet" href="/test.css">
 <script charset="utf-8" id="seajsnode" src="https://a.alipayobjects.com/static/arale/seajs/1.2.0/??sea.js,plugin-combo.js"></script>
@@ -27,8 +28,8 @@ html{color:#4d4d4d;background:#fff;}
 </form>
 
 <div id=oldStyle></div>
-<!-- 下面这种情况引号后面有空格，也会误判，不过这种情况也是不合理的 -->
-<a href=" test =oldStyle"></a>
+<!-- 下面这种情况引号前后有空格，会误判 -->
+<div data-explain=" test =oldStyle "></div>
 
 
 </body>
