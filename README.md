@@ -8,17 +8,98 @@ A code analysis engine.
 $ npm install catbus -g
 ```
 
-## 扫描规则自定义规则定义
+## 使用
+catbus支持三种文件:htm，js，css
+- 扫描文件
+```
+$ catbus /path/to/file.htm
+$ catbus /path/to/file.js
+$ catbus /path/to/file.css
+```
 
-每一个自定义规则应配置下列信息：
+- 扫描目录
+```
+$ catbus /path/to/directory/
+```
+
+- 扫描URL
+```
+$ catbus https://financeprod.alipay.com/financing/dcbApp.htm
+```
+
+## 高级用法
+**配置文件**
+在当前扫描目录下，新增文件`catbus-config.js`，配置文件代码示例如下：
+```javascript
+var config = {
+  options: [],
+  rules: []
+};
+exports.config = config;
+
+```
+配置文件中，用户可以配置基础扫描规则的开启和关闭、自定义扫描规则
+
+**基础规则配置**
+在options数组中，设置开启的扫描规则，没列入的规则将不执行。如果没有配置options则默认执行所有基础扫描规则。
+```javascript
+var config = {
+  options: [
+    'html-tag-close', 
+    'html-id-duplicate', 
+    'html-meta-charset', 
+    'html-unsafe-resources', 
+    'html-https-warning', 
+    'html-hard-code', 
+    'html-doctype'
+  ],
+  rules: []
+};
+exports.config = config;
+```
+
+**编写自定义规则**
+在rules数组中编写自定义规则，示例如下
+```javascript
+var config = {
+  options: [],
+  rules: [
+    {
+      author: "远尘 <codedancerhua@gmail.com>",
+      id: "form-table-className",
+      description: "表单内的表格class必须包含table form-table well",
+      level: "error",
+      tagName: "form",
+      validator: function(reporter, nodes) {
+        var classes;
+        for (var i = 0; i < nodes.length; i++) {
+          if (nodes[i].childNodes[0].tagName == 'table') {
+            classes = nodes[i].childNodes[0].getAttribute('class');
+            if (!classes ||
+                classes.indexOf('table') == -1 || 
+                    classes.indexOf('form-table') == -1 ||
+                      classes.indexOf('well') == -1) {
+              reporter[this.level](this.description, nodes[i].line, null, this)
+            }
+          }
+        }
+      }
+
+    }
+  ]
+};
+
+exports.config = config;
+```
+自定义规则API说明：
 - 规则id ("id"), id由系统分配，分为全局id（例如：G00001）和局部id（L00001）
 - 规则说明 ("description")
 - 规则级别 ("Error"/"Warning")
 - 规则作者 ("author")
 - 规则应用对象Tag ("tagName")
+- 扫描器API：reporter用于记录扫描结果的错误/警告，nodes是匹配`tagName`的所有节点数组
 
-整个扫描规则定义到一个配置文件里(比如catbus-config.js)，格式示例如下
-
+完整的配置文件示例如下:
 ```javascript
 var config = {
   options: [
