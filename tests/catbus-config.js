@@ -3,7 +3,7 @@ var config = {
     'html-tag-close', 
     'html-id-duplicate', 
     'html-meta-charset', 
-    'html-unsafe-resources', 
+    'html-unsafe-resource', 
     'html-https-warning', 
     'html-hard-code', 
     'html-doctype'
