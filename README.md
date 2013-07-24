@@ -9,7 +9,7 @@ $ npm install catbus -g
 ```
 
 ## 使用
-catbus支持三种文件:htm，js，css
+catbus支持三种类型的文档:html、js、css。
 - 扫描文件
 ```
 $ catbus /path/to/file.htm
@@ -25,6 +25,8 @@ $ catbus /path/to/directory/
 - 扫描URL
 ```
 $ catbus https://financeprod.alipay.com/financing/dcbApp.htm
+$ catbus https://www.alipay.com/
+$ catbus ttp://php.net/downloads.php
 ```
 
 ## 高级用法
