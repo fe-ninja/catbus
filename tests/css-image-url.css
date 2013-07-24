@@ -1,0 +1,66 @@
+.toBank{background-position:0 -60px}
+.page .page-head{padding-top:20px}
+.page-head{padding-left:0;padding-bottom:0}
+.payment .page-head .title,.otmpay .page-head .title{margin-bottom:20px}
+.title{line-height:30px;position:relative;overflow:hidden}
+.title h2{font-size:30px;font-weight:normal;margin-right:12px;float:left;line-height:1.1;font-family:Microsoft YaHei,SimHei,SimSun,sans-serif}
+.title .slogan{font-size:18px;line-height:1;padding-top:12px;color:#666;font-family:Microsoft YaHei,SimHei,SimSun,sans-serif}
+.rbox{padding-top:10px;zoom:1;clear:both}
+.content{float:right}
+input.i-text{width:210px}
+input.i-text-amount{width:80px;font-weight:700;ime-mode:disabled}
+.i-text{border-top:1px #AAA solid;border-right:1px #DDD solid;border-bottom:1px #DDD solid;border-left:1px #AAA solid;font-family:Tahoma}
+.ui-form-item2 .tip-form{padding-top:0;padding-bottom:20px;margin-top:-17px}
+.reload-code{color:#07679c;cursor:pointer}
+.payment .rbox-bg{background:0;border:0}
+.payment .small-item{padding-top:20px;padding-left:145px;padding-bottom:15px}
+input.i-text{height:21px}
+.ui-form-item2 .hasPlaceholder{color:#a09e99}
+.ui-form-item2 ::-webkit-input-placeholder{color:#a09e99}
+.ui-form-item2 :-moz-placeholder{color:#a09e99}
+.otmpay .ui-form-input2,.payment .ui-form-input2{padding-left:20px;padding-right:20px}
+.payment .ui-form-item2{padding-bottom:20px;padding-left:145px}
+.ui-form-selectbox2 .fm-link{vertical-align:2px}
+.tip-normal li{color:#b2b2b2;padding-left:20px;background:transparent url(https://img.alipay.com/pa/frame/v2/ico-pa.png) no-repeat -27px -507px}
+.tip-normal a:link,.tip-normal a:visited{color:#4d4d4d}
+.payment .confirm-head{font-size:14px;height:55px;padding-top:20px;background:#ebf2fa;border-radius:6px 6px 0 0;padding-left:121px;padding-bottom:28px;line-height:60px;vertical-align:middle;border-bottom:1px solid #d2e8ed}
+.rbox table{width:100%;padding-bottom:5px;border-collapse:separate}
+.payment .rbox th.rbox-label{text-align:right;width:196px}
+.payment .rbox th.rbox-label span{border:0;padding-left:17px}
+.payment img.recipient{float:left;margin-right:15px;border:1px solid #d2d2d2;padding:1px;margin-left:20px}
+.payment .recipient-text{padding:0}
+.payment .rbox-label-explain span,.payment .rbox-item-explain span{margin-top:-29px}
+.payment .rbox-label span,.payment .rbox-item span{margin-bottom:35px;display:block}
+.payment .rbox td.rbox-item{padding-left:0}
+.confirm-tip{width:750px;margin:0}
+.confirm-tip .tip-angle{margin:0 0 10px 0}
+.tip-angle{padding-top:9px;position:relative;line-height:16px;font-size:12px;clear:both;overflow:hidden}
+.t-warn .tip-angle-container{border:1px #e7c560 solid;background:#ffff8d;float:none}
+.t-warn .tip-angle-content{background-position:-55px -474px}
+.tip-angle-content{margin-top:0;padding:3px 2px 4px;_padding:3px 2px;padding-left:24px;line-height:normal;_line-height:normal;border:1px white solid;background:url(https://img.baidu.com/pa/frame/v2/ico-pa.png) -23px -506px no-repeat}
+.payment .confirm-button{margin-top:20px;padding-left:200px}
+.rbox-title{padding:0;margin-top:50px;margin-bottom:5px;font-size:16px;font-weight:normal;font-family:Microsoft YaHei,SimHei,SimSun,sans-serif}
+input.i-text-authcode{width:45px}
+.logoText{line-height:37px;padding-left:10px;font-size:25px;border-left:1px solid #d1d1d1}
+.confirm .content{width:990px;float:none}
+.notice-box{color:#333;min-height:50px;_height:50px;line-height:150%;border-bottom:1px #eaead7 solid;padding-left:150px;padding-right:52px}
+.notice-top-link{cursor:pointer;font-size:14px;font-weight:normal;padding-right:11px;background:url("https://i.alipayobjects.com/e/201204/2yKUMZJzb8.gif") no-repeat scroll 58px 6px}
+.notice-top-link:hover{cursor:pointer;text-decoration:underline}
+.J-show-detail{background-position:60px 6px}
+.J-hide-detail{background-position:60px -20px}
+.notice-explain{line-height:20px}
+.notice-success{background-color:#edffcc}
+.notice-success,.notice-error,.n-warn,.n-cue,.n-help,.n-forbidden,.n-loading{padding-top:20px;padding-bottom:10px}
+.notice-success h3,.notice-error h3,.n-warn h3,.n-cue h3,.n-help h3,.n-forbidden h3,.n-loading h3{padding-top:7px}
+.notice-error,.notice-error-m,.n-forbidden,.n-forbidden-m{border:1px #f6c8b5 solid;background-color:#fceee8}
+.n-warn,.n-warn-m{border:1px #e7c560 solid;background-color:#ffff9d}
+.notice-icon{width:45px;height:45px;text-indent:-999;margin-left:-50px;margin-top:-3px;display:block;background:url('https://img.alipay.com/pa/frame/v2/ico-pa.png') 0 0 no-repeat;float:left}
+.notice-success .notice-icon{background-position:-917px 1px}
+.notice-error .notice-icon{background-position:-548px -241px}
+.n-forbidden .notice-icon{background-position:-826px -60px}
+.n-warn .notice-icon{background-position:-640px -180px}
+.notice-box h3{font-family:Microsoft YaHei,SimHei,SimSun,sans-serif;font-size:18px;color:black}
+.result-box{width:352px;border:1px solid #d0deab;margin:14px 0;background:#fff;-webkit-box-shadow:0 0 7px 1px #d0deab;-moz-box-shadow:0 0 7px 1px #d0deab;box-shadow:0 0 7px 1px #d0deab}
+.result-inner{margin:10px 0 20px 0;background:url('https://i.alipayobjects.com/e/201204/2unmdEkFhb.png') repeat-y 10px 0;padding:0 10px 0 30px}
+.result-title{border-bottom:1px dashed #ccc;font-size:14px;font-weight:bold;padding-bottom:8px}
+.result-box table{margin-top:10px;line-height:23px}
