@@ -141,3 +141,6 @@ var config = {
 
 exports.config = config;
 ```
+
+## 提BUG提建议
+请提到这里：https://github.com/totorojs/catbus/issues
