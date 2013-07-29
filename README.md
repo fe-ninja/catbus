@@ -26,7 +26,7 @@ $ catbus /path/to/directory/
 ```
 $ catbus https://financeprod.alipay.com/financing/dcbApp.htm
 $ catbus https://www.alipay.com/
-$ catbus ttp://php.net/downloads.php
+$ catbus http://php.net/downloads.php
 ```
 
 ## 高级用法
