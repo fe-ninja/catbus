@@ -30,8 +30,11 @@ $ catbus http://php.net/downloads.php
 ```
 
 ## 高级用法
+
 **配置文件**
+
 在当前扫描目录下，新增文件`catbus-config.js`，配置文件代码示例如下：
+
 ```javascript
 var config = {
   options: [],
@@ -40,10 +43,14 @@ var config = {
 exports.config = config;
 
 ```
+
 配置文件中，用户可以配置基础扫描规则的开启和关闭、自定义扫描规则
 
+
 **基础规则配置**
+
 在options数组中，设置开启的扫描规则，没列入的规则将不执行。如果没有配置options则默认执行所有基础扫描规则。
+
 ```javascript
 var config = {
   options: [
@@ -61,7 +68,9 @@ exports.config = config;
 ```
 
 **编写自定义规则**
+
 在rules数组中编写自定义规则，示例如下
+
 ```javascript
 var config = {
   options: [],
@@ -93,6 +102,7 @@ var config = {
 
 exports.config = config;
 ```
+
 自定义规则API说明：
 - 规则id ("id"), id由系统分配，分为全局id（例如：G00001）和局部id（L00001）
 - 规则说明 ("description")
@@ -102,6 +112,7 @@ exports.config = config;
 - 扫描器API：reporter用于记录扫描结果的错误/警告，nodes是匹配`tagName`的所有节点数组
 
 完整的配置文件示例如下:
+
 ```javascript
 var config = {
   options: [
