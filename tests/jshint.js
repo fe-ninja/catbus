@@ -22,7 +22,6 @@ for (var i = 0; i < 10; i++) {
 
 debugger; // debug
 
-var obj = {
-    test: 'val1',
-    test1: 'val2',
-}
+Class({"test":'val',}) // obj extra comma
+Class({,}) // cannot detect
+Class({test:1,bb:2,cc:3,})
