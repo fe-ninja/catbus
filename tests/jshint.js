@@ -21,3 +21,8 @@ for (var i = 0; i < 10; i++) {
 
 
 debugger; // debug
+
+var obj = {
+    test: 'val1',
+    test1: 'val2',
+}
