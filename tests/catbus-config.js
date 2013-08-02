@@ -7,7 +7,8 @@ var config = {
     "html-https-warning": false, 
     "html-hard-code": false, 
     "html-doctype": false,
-    "js-bitwise": false
+    "js-bitwise": false,
+    "html-inline-script": false
   },
   rules: [
     {

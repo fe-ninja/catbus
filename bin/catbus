@@ -2,20 +2,20 @@
 var commander = require('commander');
 require('colors');
 
-function list(val) {
-    return val.split(',');
-}
-
 commander.
   version(require('../package').version).
   usage('[options] <file| directory| url>'.red).
   option('-v, --verbose', 'print detailed info').
-  // option('-l, --list <rules>', 'TESTING : list current rules', list).
+  option('-l, --list', 'list current rules').
   parse(process.argv);
 
-// console.log('process.env: ' + JSON.stringify(process.env));
-// console.log(JSON.stringify(commander));
-// console.log('list: %j ...' ,commander.list);
+if (commander.list) {
+    var Rules = require('../lib/rules')
+    if (Rules.rules && Rules.ruleStatus) {
+        listRules(Rules.ruleStatus)
+    }
+    process.exit()
+}
 
 // output help and exit if no args found
 if (commander.args.length === 0) {
@@ -24,3 +24,33 @@ if (commander.args.length === 0) {
 
 var scanner = require('../lib/catbus').scanner;
 scanner(commander);
+
+
+function listRules(ruleStatus) {
+    var activeRules = []
+    var deactiveRules= []
+    var i
+
+    for (i in ruleStatus) {
+        if (ruleStatus[i] == true) {
+            activeRules.push(i)
+        } else if (ruleStatus[i] == false){
+            deactiveRules.push(i)
+        }
+    }
+
+    console.log('')
+    console.log('Active rules:')
+    console.log('')
+    activeRules.forEach(function(rule) {
+        console.log('   ' + rule)
+    })
+
+    console.log('')
+    console.log('Deactive rules:')
+    console.log('')
+    deactiveRules.forEach(function(rule) {
+        console.log('   ' + rule)
+    })
+    console.log('')
+}
