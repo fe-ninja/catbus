@@ -108,7 +108,7 @@ exports.config = config;
 ```
 
 **自定义规则API说明：**
-- `id`：规则标识，必选
+- `id`：规则标识，命名必须以扫描文档对象类型开头，如`html-`、`css-`或`js-`，必选
 - `author`：规则作者，必选
 - `description`：规则描述，必选
 - `validator`：规则处理函数，必选
