@@ -116,7 +116,7 @@ exports.config = config;
     - 对于js、css规则，传入两个参数：function(reporter, context)
     - `reporter`为报告器，有reporter.error和reporter.warning两个方法
     - `nodes`为匹配到tagName的节点数组
-    - `context`为扫描文件全文字符串
+    - `context`为扫描文件上下文，css、js为文件全文字符串，html为节点树对象
 - `level`：规则等级，可选，默认为`error`
 - `tagName`：html匹配节点标签名，默认为`*`
 
