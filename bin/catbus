@@ -7,6 +7,7 @@ commander.
   usage('[options] <file| directory| url>'.red).
   option('-v, --verbose', 'print detailed info').
   option('-l, --list', 'list current rules').
+  option('-r, --recursive', 'scan directory recursively').
   parse(process.argv);
 
 if (commander.list) {
