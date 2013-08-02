@@ -7,6 +7,10 @@ A code analysis engine.
 ```
 $ npm install catbus -g
 ```
+安装如有报错，请尝试强制安装：
+```
+$ npm install catbus -gf
+```
 
 ## 使用
 catbus支持三种类型的文档:html、js、css。
@@ -37,7 +41,7 @@ $ catbus http://php.net/downloads.php
 
 ```javascript
 var config = {
-  options: [],
+  options: {},
   rules: []
 };
 exports.config = config;
@@ -49,19 +53,19 @@ exports.config = config;
 
 **基础规则配置**
 
-在options数组中，设置开启的扫描规则，没列入的规则将不执行。如果没有配置options则默认执行所有基础扫描规则。
+在options对象中，设置规则开启/关闭，`true`为开启，`false`为关闭。
 
 ```javascript
 var config = {
-  options: [
-    'html-tag-close', 
-    'html-id-duplicate', 
-    'html-meta-charset', 
-    'html-unsafe-resources', 
-    'html-https-warning', 
-    'html-hard-code', 
-    'html-doctype'
-  ],
+  options: {
+    "html-tag-close": true, 
+    "html-id-duplicate": false, 
+    "html-meta-charset": false, 
+    "html-unsafe-resource": false, 
+    "html-https-warning": false, 
+    "html-hard-code": false, 
+    "html-doctype": false
+  },
   rules: []
 };
 exports.config = config;
@@ -73,7 +77,7 @@ exports.config = config;
 
 ```javascript
 var config = {
-  options: [],
+  options: {},
   rules: [
     {
       author: "远尘 <codedancerhua@gmail.com>",
@@ -103,27 +107,33 @@ var config = {
 exports.config = config;
 ```
 
-自定义规则API说明：
-- 规则id ("id"), id由系统分配，分为全局id（例如：G00001）和局部id（L00001）
-- 规则说明 ("description")
-- 规则级别 ("Error"/"Warning")
-- 规则作者 ("author")
-- 规则应用对象Tag ("tagName")
-- 扫描器API：reporter用于记录扫描结果的错误/警告，nodes是匹配`tagName`的所有节点数组
+**自定义规则API说明：**
+- `id`：规则标识，必选
+- `author`：规则作者，必选
+- `description`：规则描述，必选
+- `validator`：规则处理函数，必选
+    - 对于html规则，传入三个参数：function(reporter, nodes, context)
+    - 对于js、css规则，传入两个参数：function(reporter, context)
+    - `reporter`为报告器，有reporter.error和reporter.warning两个方法
+    - `nodes`为匹配到tagName的节点数组
+    - `context`为扫描文件全文字符串
+- `level`：规则等级，可选，默认为`error`
+- `tagName`：html匹配节点标签名，默认为`*`
 
-完整的配置文件示例如下:
+
+**完整的配置文件示例如下:**
 
 ```javascript
 var config = {
-  options: [
-    'html-tag-close', 
-    'html-id-duplicate', 
-    'html-meta-charset', 
-    'html-unsafe-resources', 
-    'html-https-warning', 
-    'html-hard-code', 
-    'html-doctype'
-  ],
+  options: {
+    "html-tag-close": true, 
+    "html-id-duplicate": false, 
+    "html-meta-charset": false, 
+    "html-unsafe-resource": false, 
+    "html-https-warning": false, 
+    "html-hard-code": false, 
+    "html-doctype": false
+  },
   rules: [
     {
       author: "远尘 <codedancerhua@gmail.com>",

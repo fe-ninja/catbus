@@ -1,13 +1,14 @@
 var config = {
-  options: [
-    'html-tag-close', 
-    'html-id-duplicate', 
-    'html-meta-charset', 
-    'html-unsafe-resource', 
-    'html-https-warning', 
-    'html-hard-code', 
-    'html-doctype'
-  ],
+  options: {
+    "html-tag-close": true, 
+    "html-id-duplicate": false, 
+    "html-meta-charset": false, 
+    "html-unsafe-resource": false, 
+    "html-https-warning": false, 
+    "html-hard-code": false, 
+    "html-doctype": false,
+    "js-bitwise": false
+  },
   rules: [
     {
       author: "远尘 <codedancerhua@gmail.com>",
