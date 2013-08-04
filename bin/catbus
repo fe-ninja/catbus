@@ -4,7 +4,7 @@ require('colors');
 
 commander.
   version(require('../package').version).
-  usage('[options] <file| directory| url>'.red).
+  usage('[options] [<file> | <directory> | <url>]'.red).
   option('-v, --verbose', 'print detailed info').
   option('-l, --list', 'list current rules').
   option('-r, --recursive', 'scan directory recursively').
