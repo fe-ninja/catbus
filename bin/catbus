@@ -8,6 +8,7 @@ commander.
   option('-v, --verbose', 'print detailed info').
   option('-l, --list', 'list current rules').
   option('-r, --recursive', 'scan directory recursively').
+  option('-R, --require <module>', 'require rule module').
   parse(process.argv);
 
 if (commander.list) {
