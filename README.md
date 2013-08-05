@@ -112,11 +112,11 @@ exports.config = config;
 - `author`：规则作者，必选
 - `description`：规则描述，必选
 - `validator`：规则处理函数，必选
-    - 对于html规则，传入三个参数：function(reporter, nodes, context)
-    - 对于js、css规则，传入两个参数：function(reporter, context)
+    - 对于html规则，传入三个参数：function(reporter, nodes, rawStr)
+    - 对于js、css规则，传入两个参数：function(reporter, rawStr)
     - `reporter`为报告器，有reporter.error和reporter.warning两个方法
     - `nodes`为匹配到tagName的节点数组
-    - `context`为扫描文件上下文，css、js为文件全文字符串，html为节点树对象
+    - `rawStr`为扫描文件的原始内容字符串
 - `level`：规则等级，可选，默认为`error`
 - `tagName`：html匹配节点标签名，默认为`*`
 
@@ -141,7 +141,7 @@ var config = {
       description: "表单内的表格class必须包含table form-table well",
       level: "error",
       tagName: "form",
-      validator: function(reporter, nodes) {
+      validator: function(reporter, nodes, rawStr) {
         var classes;
         for (var i = 0; i < nodes.length; i++) {
           if (nodes[i].childNodes[0].tagName == 'table') {
