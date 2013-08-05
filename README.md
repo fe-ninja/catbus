@@ -118,7 +118,7 @@ exports.config = config;
     - `nodes`为匹配到tagName的节点数组
     - `rawStr`为扫描文件的原始内容字符串
 - `level`：规则等级，可选，默认为`error`
-- `tagName`：html匹配节点标签名，默认为`*`
+- `tagName`：html匹配节点标签名，可选，未设置时，`validator`的参数nodes为null
 
 
 **完整的配置文件示例如下:**
