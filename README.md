@@ -33,6 +33,14 @@ $ catbus https://www.alipay.com/
 $ catbus http://php.net/downloads.php
 ```
 
+- require导入扫描规则
+
+```
+$ catbus --require catbus-rule
+```
+
+其中`catbus-rule`是外部规则模块，通过npm安装`$ npm install catbus-rule -g`，示例: [cabut-html-typos](https://github.com/noahlu/catbus-html-typos)
+
 ## 高级用法
 
 **配置文件**
