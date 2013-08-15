@@ -24,8 +24,8 @@ if (commander.args.length === 0) {
     commander.help();
 }
 
-var scanner = require('../lib/catbus').scanner;
-scanner(commander);
+var scan = require('../lib/catbus').scan;
+scan(commander);
 
 
 function listRules(ruleStatus) {
