@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-var commander = require('commander');
-require('colors');
+var commander = require('commander')
+require('colors')
 
 commander.
   version(require('../package').version).
@@ -9,7 +9,7 @@ commander.
   option('-l, --list', 'list current rules').
   option('-r, --recursive', 'scan directory recursively').
   option('-R, --require <module>', 'require rule module').
-  parse(process.argv);
+  parse(process.argv)
 
 if (commander.list) {
     var Rules = require('../lib/rules')
@@ -21,11 +21,11 @@ if (commander.list) {
 
 // output help and exit if no args found
 if (commander.args.length === 0) {
-    commander.help();
+    commander.help()
 }
 
-var scan = require('../lib/catbus').scan;
-scan(commander);
+var scan = require('../lib/catbus').scan
+scan(commander)
 
 
 function listRules(ruleStatus) {
