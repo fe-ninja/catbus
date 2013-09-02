@@ -1,6 +1,9 @@
 ![catbus](https://f.cloud.github.com/assets/1229684/833986/8b8fe03a-f2b1-11e2-8948-0d0fc0d6a2b9.jpg)
 
 # Catbus
+
+[![Build Status](https://travis-ci.org/totorojs/catbus.png?branch=master)](https://travis-ci.org/totorojs/catbus)
+
 A code analysis engine.
 
 ## 安装
