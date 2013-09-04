@@ -44,6 +44,20 @@ $ catbus --require catbus-rule
 
 其中`catbus-rule`是外部规则模块，通过npm安装`$ npm install catbus-rule -g`，示例: [cabut-html-typos](https://github.com/noahlu/catbus-html-typos)
 
+- logfile设置日志输出文件(支持txt/json两种格式)
+
+保存扫描日志为 `txt` 文件
+
+```
+$ catbus -L log.txt html-hard-code.htm 
+```
+
+保存扫描结果日志为 `json` 格式
+
+```
+$ catbus -L log.json html-hard-code.htm 
+```
+
 ## 高级用法
 
 **配置文件**
