@@ -9,6 +9,7 @@ commander.
   option('-l, --list', 'list current rules').
   option('-r, --recursive', 'scan directory recursively').
   option('-R, --require <module>', 'require rule module').
+  option('-L, --logfile <file>', 'output log file .txt or .json').
   parse(process.argv)
 
 if (commander.list) {
