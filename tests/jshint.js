@@ -22,6 +22,15 @@ for (var i = 0; i < 10; i++) {
 
 debugger; // debug
 
+// redundant comma
 Class({"test":'val',}) // obj extra comma
-Class({,}) // cannot detect
+Class({,}) 
 Class({test:1,bb:2,cc:3,})
+
+// normal comma usage
+for (i = 0, j = 9; i < 9; i++, j--) {
+    //do something
+}
+var arr = [1,2,3,3,4,5]
+var obj = {a:1,b:2,c:3}
+var obj = {"a":"1","b":"2","c":"3"}
