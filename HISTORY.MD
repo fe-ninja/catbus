@@ -1,6 +1,7 @@
 ## 0.1.2 `2013-9-5`
 - 增加reporter输出json/txt格式
 - 支持hudson ci
+- 优化js-object-comma正则表达式
 
 
 
