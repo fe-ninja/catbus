@@ -1,6 +1,6 @@
 var config = {
   options: {
-    "html-tag-close": true, 
+    "html-tag-close": false, 
     "html-id-duplicate": false, 
     "html-meta-charset": false, 
     "html-unsafe-resource": false, 
