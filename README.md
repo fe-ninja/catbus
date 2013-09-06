@@ -96,6 +96,25 @@ var config = {
 exports.config = config;
 ```
 
+**配置忽略列表**
+如果项目中有一部分文件demo不希望扫描，可以设置 `ignore`：
+
+```
+var config = {
+  options: {
+    "js-unused": false
+  }, 
+  ignore: [
+    'static\\/js/\\w+\\/resources\\/.*\\.html',
+    'static\\/fastpay\\/examples'
+  ]
+}
+exports.config = config;
+
+```
+接受数组，数组项是表示正则pattern的`字符串`，所以注意反斜杠要用两次
+
+
 **编写自定义规则**
 
 在rules数组中编写自定义规则，示例如下
@@ -159,6 +178,7 @@ var config = {
     "html-hard-code": false, 
     "html-doctype": false
   },
+  ignore: ['path\\/to\\/'],
   rules: [
     {
       author: "远尘 <codedancerhua@gmail.com>",
