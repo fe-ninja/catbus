@@ -1,3 +1,9 @@
+## 0.1.3 `2013-9-9`
+- catbus-config.js添加require，ignore配置
+- 模块处理优化，--list功能放到catbus.js中处理，读取配置文件从rule.js中剥离，放到catbus.js处理
+
+
+
 ## 0.1.2 `2013-9-5`
 - 增加reporter输出json/txt格式
 - 支持hudson ci
