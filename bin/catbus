@@ -12,48 +12,10 @@ commander.
   option('-L, --logfile <file>', 'output log file .txt or .json').
   parse(process.argv)
 
-if (commander.list) {
-    var Rules = require('../lib/rules')
-    if (Rules.rules && Rules.ruleStatus) {
-        listRules(Rules.ruleStatus)
-    }
-    process.exit()
-}
-
 // output help and exit if no args found
-if (commander.args.length === 0) {
+if (commander.args.length === 0 && commander.list !== true) {
     commander.help()
 }
 
 var scan = require('../lib/catbus').scan
 scan(commander)
-
-
-function listRules(ruleStatus) {
-    var activeRules = []
-    var deactiveRules= []
-    var i
-
-    for (i in ruleStatus) {
-        if (ruleStatus[i] == true) {
-            activeRules.push(i)
-        } else if (ruleStatus[i] == false){
-            deactiveRules.push(i)
-        }
-    }
-
-    console.log('')
-    console.log('Active rules:')
-    console.log('')
-    activeRules.forEach(function(rule) {
-        console.log('   ' + rule)
-    })
-
-    console.log('')
-    console.log('Deactive rules:')
-    console.log('')
-    deactiveRules.forEach(function(rule) {
-        console.log('   ' + rule)
-    })
-    console.log('')
-}

@@ -10,6 +10,12 @@ var config = {
     "js-bitwise": false,
     "html-inline-script": false
   },
+  ignore: [
+    'tests\\/_\\w+'
+  ],
+  require: [
+    'catbus-html-typos'
+  ],
   rules: [
     {
       author: "远尘 <codedancerhua@gmail.com>",

@@ -97,7 +97,9 @@ exports.config = config;
 ```
 
 **配置忽略列表**
-如果项目中有一部分文件demo不希望扫描，可以设置 `ignore`：
+
+如果项目中有一部分文件demo不希望扫描，可以设置文件完整路径的 `ignore`，ignore接受数组，数组项是表示正则pattern的`字符串`，所以注意反斜杠要用两次，比如：
+
 
 ```
 var config = {
@@ -112,7 +114,33 @@ var config = {
 exports.config = config;
 
 ```
-接受数组，数组项是表示正则pattern的`字符串`，所以注意反斜杠要用两次
+上面的 `ignore` 忽略的文件路径有：
+
+```
+- static/js/test/resources/a.html
+- static/js/abc/resources/abc.html
+- static/fastpay/examples/
+- static/fastpay/examples/demo.htm
+- static/fastpay/examples/demo.js
+```
+
+
+**导入外部规则**
+
+可以使用`require`来配置导入的外部规则，跟命令行中的`--require`效果一样，不过这里接受的是一个规则数组：
+
+```
+var config = {
+  options: {
+    "js-unused": false
+  }, 
+  require: [
+    'catbus-html-typos'
+  ]
+}
+exports.config = config;
+
+```
 
 
 **编写自定义规则**
