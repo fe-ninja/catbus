@@ -1,3 +1,8 @@
+## 0.1.4 `2013-9-11`
+- 修正json输出js校验说明undefined错误
+- css-image-url规则忽略多行注释
+
+
 ## 0.1.3 `2013-9-9`
 - catbus-config.js添加require，ignore配置
 - 模块处理优化，--list功能放到catbus.js中处理，读取配置文件从rule.js中剥离，放到catbus.js处理
