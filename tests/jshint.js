@@ -27,6 +27,10 @@ Class({"test":'val',}) // obj extra comma
 Class({,}) 
 Class({test:1,bb:2,cc:3,})
 
+// should not be detected
+var reg = /{ab:cd,}/
+obj.value = obj.value.replace(/\.{2,}/g,".");
+
 // normal comma usage
 for (i = 0, j = 9; i < 9; i++, j--) {
     //do something
