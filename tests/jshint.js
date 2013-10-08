@@ -46,3 +46,14 @@ for (i = 0, j = 9; i < 9; i++, j--) {
 var arr = [1,2,3,3,4,5]
 var obj = {a:1,b:2,c:3}
 var obj = {"a":"1","b":"2","c":"3"}
+
+
+// js reserved words
+// var event
+var abc = "var class this do"
+var event
+var class
+var classesNotReserved
+obj.class
+
+
